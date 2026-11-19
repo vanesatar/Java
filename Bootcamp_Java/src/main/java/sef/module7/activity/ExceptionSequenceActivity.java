@@ -1,0 +1,29 @@
+package sef.module7.activity;
+
+// Needs to be completed
+// 1 - Find out the error in this program and share your finding with the instructor
+public class ExceptionSequenceActivity {
+    public static void main(String[] args) {
+        new ExceptionSequenceActivity().divide(10, 0);
+    }
+
+    /*void divide(int num1, int num2) {
+        try {
+            System.out.println(num1 / num2);
+        } catch (Exception e) { //parent class it has to be after ArithmeticException, catches everything
+            System.out.println("Exception!!!");
+        } catch (ArithmeticException a) { //couldnt reach
+            System.out.println("Division by zero is not allowed");
+        }
+    }*/
+    //correct version
+    void divide(int num1, int num2) {
+        try {
+            System.out.println(num1 / num2);
+        } catch (ArithmeticException a) {
+            System.out.println("Division by zero is not allowed");
+        } catch (Exception e) {
+            System.out.println("Exception!!!");
+        }
+    }
+}
